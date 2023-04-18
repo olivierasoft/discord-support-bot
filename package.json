@@ -25,7 +25,7 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/event-emitter": "^1.4.1",
     "@nestjs/platform-express": "^9.0.0",
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.9.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
@@ -67,6 +67,12 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/../src/$1",
+      "^@config/(.*)$": "<rootDir>/../src/config/$1",
+      "^@modules/(.*)$": "<rootDir>/../src/modules/$1",
+      "^@core/(.*)$": "<rootDir>/../src/core/$1"
+    }
   }
 }
